@@ -1,0 +1,63 @@
+<%- include('header.ejs'); %>
+
+<div class="main">
+
+    <header class="topbar">
+        <h2>Add Client</h2>
+        <div class="user">Welcome, Admin</div>
+    </header>
+
+    <section class="content">
+
+        <div class="panel">
+
+            <h3>Client Form</h3>
+
+            <form class="form"
+                  action="/admin/client_save"
+                  method="post">
+
+                <div class="field">
+
+                    <label>Client Name</label>
+
+                    <input
+                        type="text"
+                        name="c_name"
+                        placeholder="Client Name"
+                        required>
+
+                </div>
+
+                <div class="field">
+
+                    <label>Description</label>
+
+                    <textarea
+                        name="c_desc"
+                        placeholder="Client description..."
+                        required></textarea>
+
+                </div>
+
+                <div class="actions">
+
+                    <button class="btn" type="submit">
+                        Save
+                    </button>
+
+                    <button class="btn btn-ghost" type="reset">
+                        Clear
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</div>
+
+<%- include('footer.ejs'); %>

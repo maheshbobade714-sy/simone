@@ -1,0 +1,105 @@
+<%- include('header.ejs'); %>
+
+<div class="main">
+
+    <header class="topbar">
+        <h2>Add Education</h2>
+        <div class="user">Welcome, Admin</div>
+    </header>
+
+    <section class="content">
+
+        <div class="panel">
+
+            <h3>Experience Form</h3>
+
+            <form class="form"
+                  action="/admin/experience_save"
+                  method="post">
+
+                <div class="row">
+
+                    <div class="field">
+
+                        <label for="year">
+                            Experience Year
+                        </label>
+
+                        <input
+                            id="year"
+                            type="text"
+                            name="e_year"
+                            placeholder="2020 - 2024">
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="title">
+                            Position
+                        </label>
+
+                        <input
+                            id="title"
+                            type="text"
+                            name="e_title"
+                            placeholder="Position">
+
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="place">
+                        Company
+                    </label>
+
+                    <input
+                        id="place"
+                        type="text"
+                        name="e_place"
+                        placeholder="University Name">
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="desc">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="desc"
+                        name="e_desc"
+                        placeholder="Experience description..."></textarea>
+
+                </div>
+
+
+                <div class="actions">
+
+                    <button class="btn" type="submit">
+                        Save
+                    </button>
+
+                    <button class="btn btn-ghost" type="reset">
+                        Clear
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</div>
+
+</div>
+
+<%- include('footer.ejs'); %>

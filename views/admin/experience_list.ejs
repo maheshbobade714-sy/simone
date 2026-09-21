@@ -1,0 +1,81 @@
+<%- include('header.ejs'); %>
+
+<div class="main">
+
+    <header class="topbar">
+        <h2>Experience Table</h2>
+        <div class="user">Welcome, Admin</div>
+    </header>
+
+    <section class="content">
+
+        <div class="panel">
+
+            <h3>All Experience</h3>
+
+            <p class="hint">All experience records.</p>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Year</th>
+                        <th>Position</th>
+                        <th>Company</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <% for(var i = 0; i < experience.length; i++) { %>
+
+                    <tr>
+
+                        <td>
+                            <%= i + 1 %>
+                        </td>
+
+                        <td>
+                            <%= experience[i].e_year %>
+                        </td>
+
+                        <td>
+                            <%= experience[i].e_title %>
+                        </td>
+
+                        <td>
+                            <%= experience[i].e_place %>
+                        </td>
+
+                        <td>
+                            <%= experience[i].e_desc %>
+                        </td>
+
+                        <td>
+                            <span class="badge badge-ok">
+                                Active
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <% } %>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</div>
+
+</div>
+
+<%- include('footer.ejs'); %>

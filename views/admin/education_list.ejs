@@ -1,0 +1,88 @@
+<%- include('header.ejs'); %>
+
+<div class="main">
+
+    <header class="topbar">
+        <h2>Education Table</h2>
+        <div class="user">Welcome, Admin</div>
+    </header>
+
+    <section class="content">
+
+        <div class="panel">
+
+            <h3>All Education</h3>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Year</th>
+                        <th>Title</th>
+                        <th>College</th>
+                        <th>Description</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <% for(var i=0; i<data.length; i++){ %>
+
+                    <tr>
+
+                        <td><%= i+1 %></td>
+
+                        <td>
+                            <%= data[i].e_year %>
+                        </td>
+
+                        <td>
+                            <%= data[i].e_title %>
+                        </td>
+
+                        <td>
+                            <%= data[i].e_place %>
+                        </td>
+
+                        <td>
+                            <%= data[i].e_desc %>
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="/admin/education_edit/<%= data[i].eid %>"
+                                class="badge badge-ok">
+                                Edit
+                            </a>
+
+                            <a
+                                href="/admin/education_delete/<%= data[i].eid %>"
+                                class="badge badge-ok"
+                                onclick="return confirm('Are you sure?')">
+                                Delete
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                    <% } %>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</div>
+
+</div>
+
+<%- include('footer.ejs'); %>   

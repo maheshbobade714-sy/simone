@@ -1,0 +1,62 @@
+<%- include('header.ejs'); %>
+
+<div class="main">
+
+    <header class="topbar">
+        <h2>Add Skill</h2>
+        <div class="user">Welcome, Admin</div>
+    </header>
+
+    <section class="content">
+
+        <div class="panel">
+
+            <h3>Skill Form</h3>
+
+            <form class="form"
+                  action="/admin/skill_save"
+                  method="post">
+
+                <div class="field">
+                    <label>Skill Name</label>
+
+                    <input
+                        type="text"
+                        name="s_title"
+                        placeholder="JavaScript"
+                        required>
+                </div>
+
+                <div class="field">
+                    <label>Percentage</label>
+
+                    <input
+                        type="number"
+                        name="s_percentage"
+                        placeholder="80"
+                        min="0"
+                        max="100"
+                        required>
+                </div>
+
+                <div class="actions">
+
+                    <button class="btn" type="submit">
+                        Save
+                    </button>
+
+                    <button class="btn btn-ghost" type="reset">
+                        Clear
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</div>
+
+<%- include('footer.ejs'); %>

@@ -1,0 +1,65 @@
+<%- include('header.ejs'); %>
+
+<div class="main">
+
+    <header class="topbar">
+        <h2>Skill Table</h2>
+        <div class="user">Welcome, Admin</div>
+    </header>
+
+    <section class="content">
+
+        <div class="panel">
+
+            <h3>All Skills</h3>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Skill</th>
+                        <th>Percentage</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <% for(var i = 0; i < skill.length; i++) { %>
+
+                    <tr>
+
+                        <td>
+                            <%= i + 1 %>
+                        </td>
+
+                        <td>
+                            <%= skill[i].s_title %>
+                        </td>
+
+                        <td>
+                            <%= skill[i].s_percentage %>%
+                        </td>
+
+                        <td>
+                            <span class="badge badge-ok">
+                                Active
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <% } %>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</div>
+
+<%- include('footer.ejs'); %>
